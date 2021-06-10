@@ -1,0 +1,56 @@
+package abhaykumarjava;
+//this program basically takes the input from the user and save the record like name,usn,
+//dept in array and will show the list of students(in that it shows department of students)
+
+import java.util.Scanner;
+
+public class Student {
+	String name;
+	String usn;
+	String dept;
+	
+public Student(String name,String usn,String dept)
+{ 	this.usn=usn;
+	this.name=name;
+	this.dept=dept;
+}
+	
+	public String toString()
+	{
+		return usn+"\t"+name+"\t"+dept;
+	}
+
+
+	public static void main(String[] args) {
+	 int i;
+	 String name;
+	 String usn;
+	 String dept;
+	   
+	 Scanner stu =new Scanner(System.in);
+	 
+	 System.out.println("Enter number of students");
+	 
+	 int n= stu.nextInt();
+	 Student[] students=new Student[n];
+	 System.out.println("~~~ENTER STUDENT DETAILS HERE~~~");
+	 for(i=0;i<n;i++)
+	 {
+		 System.out.println("Enter Student "+(i+1)+"\t"+"details\n");
+		 System.out.println("Enter the name");
+		 name =stu.next();
+		 System.out.println("Enter the usn");
+		 usn=stu.next();
+		 System.out.println("Enter the department");
+		 dept=stu.next();
+		 students[i]=new Student(usn,name,dept);
+	 }
+	 
+	 System.out.println("NAME"  +  "\t"+  "USN"+"\t"+  "DEPARTMENT");
+	   for(i=0;i<n;i++)
+	   {
+		   System.out.println(students[i]);
+	   }
+	}
+}
+
