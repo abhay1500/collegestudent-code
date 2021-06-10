@@ -1,6 +1,6 @@
 package abhaykumarjava;
-//this program basically takes the input from the user and save the record like name,usn,
-//dept in array and will show the list of students(in that it shows department of students)
+//In this program a Student named class was made , basically this program takes input from the user like name, usn,depart 
+//and store the values in array and in last it will display the students list that shows department of the students..
 
 import java.util.Scanner;
 
